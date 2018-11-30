@@ -34,11 +34,19 @@ document.getElementById("submit").onclick =()=>{
 <span style="margin-left:20px">UserName:</span><br>
 <input style="margin-left:20px" id="name" required type="text" name="username"/><br><br>
 <div>
-<span style="margin-left:20px">FirstName:</span>
-<span style="margin-left:130px">lastName:</span><br>
-<input style="margin-left:20px" style="margin-right: 20px" required type="text" name="firstname"/>
+  <div class="row">
+      <div class="col-6">
+        <span style="">FirstName:</span>
+        <input style="margin-left:20px" style="margin-right: 20px" required type="text" name="firstname"/>
+      </div>
+    </div class="col-6">
+      <span style="">lastName:</span>
+      <input style="margin-left:20px" required type="text" name="lastname"/>
+    </div>
+  </div>
 
-<input style="margin-left:20px" required type="text" name="lastname"/><br><br>
+
+
 </div>
 <span style="margin-left:20px"> Enter Your Email address:</span><br>
 <input required style="margin-left:20px" name="email" type="Email"/><br><br>
