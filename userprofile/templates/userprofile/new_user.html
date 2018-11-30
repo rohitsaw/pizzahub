@@ -30,37 +30,49 @@ document.getElementById("submit").onclick =()=>{
 
 <form class="card-body" style="margin-left:auto; margin-right:auto" action="{% url 'userprofile:signup' %}" method="post">
 {% csrf_token %}
-<div class="userform">
+<div class="userform container">
   
   <div class="row">
     <div class="col-12">
-      <span style="margin-left:20px">UserName:</span><br>
-      <input style="margin-left:20px" id="name" required type="text" name="username"/>
+      <span style="">UserName:</span><br>
+      <input style="" id="name" required type="text" name="username"/>
     </div>
   </div>
   
   <div class="row">
       <div class="col-6">
         <span style="">FirstName:</span>
-        <input style="margin-left:20px" style="margin-right: 20px" required type="text" name="firstname"/>
+        <input style="" style="" required type="text" name="firstname"/>
       </div>
     </div class="col-6">
       <span style="">lastName:</span>
-      <input style="margin-left:20px" required type="text" name="lastname"/>
+      <input style="" required type="text" name="lastname"/>
     </div>
   </div>
 
-
-
+  <div class="row">
+    <div class="col-12">
+      <span style=""> Enter Your Email address:</span><br>
+      <input required style="" name="email" type="Email"/><br><br>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-6">
+    <span style="">Password:</span>
+    <span style="">ReEnter Password:</span>
+    </div>
+    <div class="col-6">
+    <input style="" id="password1" required type="password" name="password"/>
+    <input style="" id="password2" required type="password" />
+    </div>
+  </div>
+  
 </div>
-<span style="margin-left:20px"> Enter Your Email address:</span><br>
-<input required style="margin-left:20px" name="email" type="Email"/><br><br>
-<span style="margin-left:20px">Password:</span>
-<span style="margin-left:135px">ReEnter Password:</span><br>
-<input style="margin-left:20px" id="password1" required type="password" name="password"/>
-<input style="margin-left:20px" id="password2" required type="password" />
+
+
 <br><br>
-<input class="btn btn-success" style="margin-left:20px" id="submit" type="Submit" value="Signup"/>
+<input class="btn btn-success" style="margin-left:35%;" id="submit" type="Submit" value="Signup"/>
 </div>
 </form>
 </div>
