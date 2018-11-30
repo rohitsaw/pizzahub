@@ -31,9 +31,14 @@ document.getElementById("submit").onclick =()=>{
 <form class="card-body" style="margin-left:auto; margin-right:auto" action="{% url 'userprofile:signup' %}" method="post">
 {% csrf_token %}
 <div class="userform">
-<span style="margin-left:20px">UserName:</span><br>
-<input style="margin-left:20px" id="name" required type="text" name="username"/><br><br>
-<div>
+  
+  <div class="row">
+    <div class="col-12">
+      <span style="margin-left:20px">UserName:</span><br>
+      <input style="margin-left:20px" id="name" required type="text" name="username"/>
+    </div>
+  </div>
+  
   <div class="row">
       <div class="col-6">
         <span style="">FirstName:</span>
