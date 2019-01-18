@@ -1,38 +1,14 @@
 {% extends 'orders/base.html' %}
 
 {% block head %}
+{% load static %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cart!</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script>
-$(document).ready(function(){
-$("#buynow").click(function(){
-var price = "{{ price }}"
-console.log(price);
-
- $.ajax(
-    {
-        type:"POST",
-        url : "/buy",
-        data : {
-            'csrfmiddlewaretoken' :$('[name=csrfmiddlewaretoken]').val(),
-            price : price
-        },
-        success : function(data){
-            alert("success")
-            window.location.reload(true);
-        }
-
-    }
-)       
-
-});
-})
-
-</script>
+<script src="{% static 'orders/viewcart.js' %}"> </script>
 {% endblock %}
 
 

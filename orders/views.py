@@ -8,6 +8,9 @@ import datetime
 
 
 def index(request):
+    """
+    Render Home page 
+    """
     context = {
         "Regular_Pizza" : list(Regular_Pizza_Price.objects.all()),
         "Sicilian_Pizza" : list(Sicilian_Pizza_Price.objects.all()),
@@ -22,6 +25,9 @@ def index(request):
     return render(request, "orders/index.html", context)
 
 def order(request):
+    """
+    render order online page
+    """
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse("userprofile:index"))
     context = {

@@ -143,7 +143,7 @@ $(document).ready(function(){
                             },
                             success: function( data ){
                                 console.log("success");
-                                alert("Pizza added to cart");
+                                alert("added to cart");
                                 $("#addtocart").prop("disabled", true);
 
                                 }
@@ -201,7 +201,7 @@ $(document).ready(function(){
                                     },
                                     success: function(data){
                                         console.log("success");
-                                        alert("Pizza added to cart");
+                                        alert("added to cart");
                                         $("#addtocart-dinner").prop("disabled", true);
 
                                     }
@@ -298,7 +298,7 @@ $(document).ready(function(){
                     item : json
                 },
                 success : function(data){
-                    alert("item added to cart");
+                    alert("added to cart");
                     $("#addtocart-pasta-salad").prop("disabled", true);
 
                 }
